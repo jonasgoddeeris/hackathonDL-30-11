@@ -1,5 +1,5 @@
-<div class="fabs">
-    <a target="_blank" id="chat" class="fab hidden"><i class="far fa-comments"></i><span>chat</span></a>
+<div class="fabs hidden" id="fab-button">
+    <a target="_blank" id="chat" class="fab"><i class="far fa-comments"></i><span>chat</span></a>
     <a target="_blank" class="fab"></a>
     <a target="_blank" class="fab"></a>
     <a id="prime" class="fab"><i class="prime zmdi zmdi-plus"></i></a>
@@ -21,7 +21,6 @@
   margin: 1em;
   right: 0;
   z-index: 998;
-  display: none;
 }
 
 .fab {
@@ -674,7 +673,7 @@ var script = document.createElement("script");
     CXBus.command('WebChat.open');
 };
 };
-$(window).load(function() {
-    $("#chat").removeClass("hidden");
+$(document).ready(function() {
+    $("#fab-button").removeClass("hidden");
 });
 </script>
