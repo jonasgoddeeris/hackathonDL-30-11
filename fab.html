@@ -1,7 +1,7 @@
 <div class="fabs hidden" id="fab-button">
-  <a target="_blank" id="chat" class="fab"><i class="far fa-comments"></i><span>chat</span></a>
-  <a target="_blank" id="feedback-usabilla" class="fab"><i class="far fa-sad-tear"></i></a>
-  <a target="_blank" id="giftfinder-dreambuddy" class="fab"><i class="fal fa-gift"></i></a>
+  <a target="_blank" id="chat" class="fab"><i class="far fa-comments"><span>chat met ons</span></i></a>
+  <a target="_blank" id="feedback-usabilla" class="fab"><i class="far fa-sad-tear"><span>feedback geven</span></i></a>
+  <a target="_blank" id="giftfinder-dreambuddy" class="fab"><i class="fal fa-gift"><span>cadeau vinden</span></i></a>
   <a id="prime" class="fab"><i class="prime zmdi zmdi-plus"></i></a>
 </div>
 <!-- <div id="dreamland_ie_chat" style="display:none;">
@@ -13,6 +13,8 @@
 <style>
 /* @import url(https://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css); */
 
+
+/* JONAS CSS - fast crappy  */
 .zmdi {
     display: inline-block;
     background-image: url(https://dreambuddy.bothrs.com/avatar.svg);
@@ -21,6 +23,12 @@
     background-position: center top;
     width: 60px;
     height: 60px;
+}
+.far > span {
+    font-family: 'Lato';
+    font-size: 14px;
+    margin-left: 8px;
+    font-weight: 800;
 }
 
 /*Floating Action Button*/
@@ -78,11 +86,12 @@ line-height: 40px;
 }
 
 .fab:not(:last-child).is-visible {
-width: 40px;
+width: 140px;
 height: 40px;
 margin: 15px auto 10;
 opacity: 1;
 visibility: visible;
+border-radius: 40px;
 }
 
 .fab:nth-last-child(1) {
