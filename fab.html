@@ -336,5 +336,8 @@ $(".fab").click(function(e) {
   }).addClass("animate");
 });
 
-
+document.querySelector("#prime").addEventListener("click", loadScripts);
+function loadScripts() {
+    document.write("<script src="https://apps.mypurecloud.com/pureconnect-widgets" pureconnect-widgets-data="eyJpZCI6IlUzOUNfRHJlYW1sYW5kQ2hhdCIsImljU2VydmVycyI6WyJjaWMtc3lzdC5jb2xydXl0LmludCJdLCJyZXZlcnNlUHJveHlVcmwiOiJodHRwczovL3B1cmVjb25uZWN0d2VidG9vbHMuc3lzdC5jb2xydXl0Z3JvdXAuY29tL2FwaSIsInVzZUNhYVMiOmZhbHNlLCJjYWFzVXJsIjpudWxsLCJ1c2VIdHRwcyI6dHJ1ZX0="></script>");
+}
 </script>
