@@ -21,6 +21,9 @@ FONT awesome ICONS used
 https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=help
 
 
+Dreambuddy SVG
+https://dreambuddy.bothrs.com/avatar.svg
+
 
 CODEPEN FAB
 We need to see if the recources used by the codepen are usefull? (roboto...) 
