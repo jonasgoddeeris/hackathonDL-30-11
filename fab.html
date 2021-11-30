@@ -1,5 +1,5 @@
 <div class="fabs">
-    <a target="_blank" class="fab"><i class="far fa-comments"></i></a>
+    <a target="_blank" id="chat" class="fab"><i class="far fa-comments"></i><span>chat</span></a>
     <a target="_blank" class="fab"></a>
     <a target="_blank" class="fab"></a>
     <a id="prime" class="fab"><i class="prime zmdi zmdi-plus"></i></a>
@@ -607,7 +607,6 @@ body .cx-widget {
 //Fab click
 $('#prime').click(function() {
   toggleFab();
-  loadScripts();
 });
 
 //Toggle chat and links
@@ -650,7 +649,9 @@ $(".fab").click(function(e) {
     left: x + 'px'
   }).addClass("animate");
 });
-
+document.getElementById("chat").addEventListener("click", function() {
+ loadScripts();
+});
 function loadScripts() {    
     var script = document.createElement("script");
   script.setAttribute("type", "text/javascript");
