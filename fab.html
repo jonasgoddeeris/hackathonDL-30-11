@@ -14,7 +14,9 @@
 @import url(https://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
 
 /*Floating Action Button*/
-
+.hidden {
+    display: none;
+}
 .fabs {
   bottom: 0;
   position: fixed;
@@ -613,6 +615,7 @@ body .cx-widget {
 //Fab click
 $('#prime').click(function() {
   toggleFab();
+  loadScripts();
 });
 
 //Toggle chat and links
@@ -655,9 +658,6 @@ $(".fab").click(function(e) {
     left: x + 'px'
   }).addClass("animate");
 });
-document.getElementById("chat").addEventListener("click", function() {
- loadScripts();
-});
 function loadScripts() {    
 if(document.querySelector("#chat-script") == null){
 var script = document.createElement("script");
@@ -666,14 +666,13 @@ var script = document.createElement("script");
   script.setAttribute("src", "https://apps.mypurecloud.com/pureconnect-widgets");
   script.setAttribute("pureconnect-widgets-data", "eyJpZCI6IlUzOUNfRHJlYW1sYW5kQ2hhdCIsImljU2VydmVycyI6WyJjaWMtc3lzdC5jb2xydXl0LmludCJdLCJyZXZlcnNlUHJveHlVcmwiOiJodHRwczovL3B1cmVjb25uZWN0d2VidG9vbHMuc3lzdC5jb2xydXl0Z3JvdXAuY29tL2FwaSIsInVzZUNhYVMiOmZhbHNlLCJjYWFzVXJsIjpudWxsLCJ1c2VIdHRwcyI6dHJ1ZX0=");
   document.body.appendChild(script);
-  script.addEventListener('load', () => {
-    CXBus.command('WebChat.open');
-});
-} else {
-    CXBus.command('WebChat.open');
 };
 };
-$(document).ready(function() {
-    $("#fab-button").removeClass("hidden");
+$(window).on('load', function () {
+      alert("Window Loaded");
+      $("#fab-button").removeClass("hidden");
+ });
+ document.getElementById("chat").addEventListener("click", function() {
+    CXBus.command('WebChat.open');
 });
 </script>
