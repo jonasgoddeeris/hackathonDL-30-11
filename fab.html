@@ -1,7 +1,7 @@
 <div class="fabs hidden" id="fab-button">
     <a target="_blank" id="chat" class="fab"><i class="far fa-comments"></i><span>chat</span></a>
-    <a target="_blank" id="feedback" class="fab"><i class="far fa-sad-tear"></i></a>
-    <a target="_blank" id="giftfinder-dreambuddy" class="fab"><i class="fal fa-gift"></i></a>
+    <a target="_blank" id="feedback-usabilla" class="fab"><i class="far fa-sad-tear"></i></a>
+    <a target="_blank" id="giftfinder-dreambuddy" class="fab" onclick="Dreambuddy.showFrame()"><i class="fal fa-gift"></i></a>
     <a id="prime" class="fab"><i class="prime zmdi zmdi-plus"></i></a>
 </div>
 <!-- <div id="dreamland_ie_chat" style="display:none;">
@@ -671,8 +671,14 @@ var script = document.createElement("script");
 $(window).on('load', function () {
       alert("Window Loaded");
       $("#fab-button").removeClass("hidden");
+      //Hide GetFeedback Digital Default button
+        window.usabilla_live("hide");
  });
- document.getElementById("chat").addEventListener("click", function() {
+document.getElementById("chat").addEventListener("click", function() {
     CXBus.command('WebChat.open');
+});
+//Find a Link and open the GetFeedback Digital Feedback form when the user clicks on the link
+document.getElementById("feedback-usabilla").addEventListener("click",function(){
+	window.usabilla_live("click");
 });
 </script>
