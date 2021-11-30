@@ -291,6 +291,7 @@
 //Fab click
 $('#prime').click(function() {
   toggleFab();
+  loadScripts();
 });
 
 //Toggle chat and links
@@ -298,7 +299,6 @@ function toggleFab() {
   $('.prime').toggleClass('is-active');
   $('#prime').toggleClass('is-float');
   $('.fab').toggleClass('is-visible');
-  document.write('<script src="https://apps.mypurecloud.com/pureconnect-widgets" pureconnect-widgets-data="eyJpZCI6IlUzOUNfRHJlYW1sYW5kQ2hhdCIsImljU2VydmVycyI6WyJjaWMtc3lzdC5jb2xydXl0LmludCJdLCJyZXZlcnNlUHJveHlVcmwiOiJodHRwczovL3B1cmVjb25uZWN0d2VidG9vbHMuc3lzdC5jb2xydXl0Z3JvdXAuY29tL2FwaSIsInVzZUNhYVMiOmZhbHNlLCJjYWFzVXJsIjpudWxsLCJ1c2VIdHRwcyI6dHJ1ZX0="></script>');
 }
 
 // Ripple effect
@@ -334,12 +334,13 @@ $(".fab").click(function(e) {
     left: x + 'px'
   }).addClass("animate");
 });
-// document.querySelector("#prime").addEventListener("click", loadScripts);
-// function loadScripts() {
-    
-//     var script = document.createElement("script");
-//   script.setAttribute("type", "text/javascript");
-//   script.setAttribute("src", "https://apps.mypurecloud.com/pureconnect-widgets");
-//   script.setAttribute("pureconnect-widgets-data", "eyJpZCI6IlUzOUNfRHJlYW1sYW5kQ2hhdCIsImljU2VydmVycyI6WyJjaWMtc3lzdC5jb2xydXl0LmludCJdLCJyZXZlcnNlUHJveHlVcmwiOiJodHRwczovL3B1cmVjb25uZWN0d2VidG9vbHMuc3lzdC5jb2xydXl0Z3JvdXAuY29tL2FwaSIsInVzZUNhYVMiOmZhbHNlLCJjYWFzVXJsIjpudWxsLCJ1c2VIdHRwcyI6dHJ1ZX0=");
-// }
+
+function loadScripts() {    
+    var script = document.createElement("script");
+  script.setAttribute("type", "text/javascript");
+  script.setAttribute("src", "https://apps.mypurecloud.com/pureconnect-widgets");
+  script.setAttribute("pureconnect-widgets-data", "eyJpZCI6IlUzOUNfRHJlYW1sYW5kQ2hhdCIsImljU2VydmVycyI6WyJjaWMtc3lzdC5jb2xydXl0LmludCJdLCJyZXZlcnNlUHJveHlVcmwiOiJodHRwczovL3B1cmVjb25uZWN0d2VidG9vbHMuc3lzdC5jb2xydXl0Z3JvdXAuY29tL2FwaSIsInVzZUNhYVMiOmZhbHNlLCJjYWFzVXJsIjpudWxsLCJ1c2VIdHRwcyI6dHJ1ZX0=");
+  document.body.appendChild(script);
+
+}
 </script>
