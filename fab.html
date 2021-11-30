@@ -1,7 +1,7 @@
 <div class="fabs hidden" id="fab-button">
   <a target="_blank" id="chat" class="fab"><i class="far fa-comments"></i><span>chat</span></a>
   <a target="_blank" id="feedback-usabilla" class="fab"><i class="far fa-sad-tear"></i></a>
-  <a target="_blank" id="giftfinder-dreambuddy" class="fab" onclick="Dreambuddy.showFrame()"><i class="fal fa-gift"></i></a>
+  <a target="_blank" id="giftfinder-dreambuddy" class="fab"><i class="fal fa-gift"></i></a>
   <a id="prime" class="fab"><i class="prime zmdi zmdi-plus"></i></a>
 </div>
 <!-- <div id="dreamland_ie_chat" style="display:none;">
@@ -23,15 +23,6 @@ position: fixed;
 margin: 1em;
 right: 0;
 z-index: 998;
-}
-.zmdi {
-    display: inline-block;
-    background-image: url(https://dreambuddy.bothrs.com/avatar.svg);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center top;
-    width: 60px;
-    height: 60px;
 }
 
 .fab {
@@ -690,4 +681,36 @@ document.getElementById("chat").addEventListener("click", function() {
 document.getElementById("feedback-usabilla").addEventListener("click",function(){
 window.usabilla_live("click");
 });
+document.getElementById("giftfinder-dreambuddy").addEventListener("click",function(){
+loadScript('https://dreambuddy.bothrs.com/bubble.js',function(){
+  Dreambuddy.showFrame();
+});
+});
+
+
+function loadScript( url, callback ) {
+if(document.querySelector("#dreambuddy-script") == null){
+  var script = document.createElement( "script" )
+  script.setAttribute("type", "text/javascript");
+  script.setAttribute("id", "dreambuddy-script");
+  if(script.readyState) {  // only required for IE <9
+      script.onreadystatechange = function() {
+        if ( script.readyState === "loaded" || script.readyState === "complete" ) {
+            script.onreadystatechange = null;
+          callback();
+          }
+    };
+  } else {  //Others
+      script.onload = function() {
+          callback();
+      };
+  }
+
+  script.src = url;
+  document.body.appendChild(script);
+}
+else{
+  callback();
+}
+}
 </script>
