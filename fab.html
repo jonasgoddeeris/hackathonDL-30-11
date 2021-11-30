@@ -1,301 +1,301 @@
 <div class="fabs hidden" id="fab-button">
-    <a target="_blank" id="chat" class="fab"><i class="far fa-comments"></i><span>chat</span></a>
-    <a target="_blank" id="feedback-usabilla" class="fab"><i class="far fa-sad-tear"></i></a>
-    <a target="_blank" id="giftfinder-dreambuddy" class="fab" onclick="Dreambuddy.showFrame()"><i class="fal fa-gift"></i></a>
-    <a id="prime" class="fab"><i class="prime zmdi zmdi-plus"></i></a>
+  <a target="_blank" id="chat" class="fab"><i class="far fa-comments"></i><span>chat</span></a>
+  <a target="_blank" id="feedback-usabilla" class="fab"><i class="far fa-sad-tear"></i></a>
+  <a target="_blank" id="giftfinder-dreambuddy" class="fab" onclick="Dreambuddy.showFrame()"><i class="fal fa-gift"></i></a>
+  <a id="prime" class="fab"><i class="prime zmdi zmdi-plus"></i></a>
 </div>
 <!-- <div id="dreamland_ie_chat" style="display:none;">
-    <div class="genesys_chat_container" id="genesys_chat_container">
-        <a onclick="CXBus.command('WebChat.open')"><img src="/ecomwcs/static/StaticWeb/DL/homepage/button.png"></a> 
-        <a onclick="closechat();" class="genesys_close">x</a>
-    </div>
+  <div class="genesys_chat_container" id="genesys_chat_container">
+      <a onclick="CXBus.command('WebChat.open')"><img src="/ecomwcs/static/StaticWeb/DL/homepage/button.png"></a> 
+      <a onclick="closechat();" class="genesys_close">x</a>
+  </div>
 </div> -->
 <style>
 @import url(https://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
 
 /*Floating Action Button*/
 .hidden {
-    display: none;
+  display: none;
 }
 .fabs {
-  bottom: 0;
-  position: fixed;
-  margin: 1em;
-  right: 0;
-  z-index: 998;
+bottom: 0;
+position: fixed;
+margin: 1em;
+right: 0;
+z-index: 998;
 }
 
 .fab {
-  display: block;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  text-align: center;
-  color: #FFF;
-  background: #00BCD4;
-  margin: 25px auto 0;
-  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-  cursor: pointer;
-  -webkit-transition: all .1s ease-out;
-  -moz-transition: all .1s ease-out;
-  -o-transition: all .1s ease-out;
-  transition: all .1s ease-out;
-  position: relative;
-  z-index: 998;
-  overflow: hidden;
+display: block!important;
+width: 56px;
+height: 56px;
+border-radius: 50%;
+text-align: center;
+color: #FFF;
+background: #00BCD4;
+margin: 25px auto 0;
+box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+cursor: pointer;
+-webkit-transition: all .1s ease-out;
+-moz-transition: all .1s ease-out;
+-o-transition: all .1s ease-out;
+transition: all .1s ease-out;
+position: relative;
+z-index: 998;
+overflow: hidden;
 }
 
 .fab > i {
-  font-size: 2em;
-  line-height: 55px;
-  -webkit-transition: all .2s ease-out;
-  -moz-transition: all .2s ease-out;
-  -o-transition: all .2s ease-out;
-  transition: all .2s ease-in-out;
+font-size: 2em;
+line-height: 55px;
+-webkit-transition: all .2s ease-out;
+-moz-transition: all .2s ease-out;
+-o-transition: all .2s ease-out;
+transition: all .2s ease-in-out;
 }
 
 .fab:not(:last-child) {
-  width: 0;
-  height: 0;
-  margin: 20px auto 0;
-  opacity: 0;
-  visibility: hidden;
+width: 0;
+height: 0;
+margin: 20px auto 0;
+opacity: 0;
+visibility: hidden;
 }
 
 .fab:not(:last-child) > i {
-  font-size: 1.4em;
-  line-height: 40px;
+font-size: 1.4em;
+line-height: 40px;
 }
 
 .fab:not(:last-child).is-visible {
-  width: 40px;
-  height: 40px;
-  margin: 15px auto 10;
-  opacity: 1;
-  visibility: visible;
+width: 40px;
+height: 40px;
+margin: 15px auto 10;
+opacity: 1;
+visibility: visible;
 }
 
 .fab:nth-last-child(1) {
-  -webkit-transition-delay: 25ms;
-  -moz-transition-delay: 25ms;
-  -o-transition-delay: 25ms;
-  transition-delay: 25ms;
+-webkit-transition-delay: 25ms;
+-moz-transition-delay: 25ms;
+-o-transition-delay: 25ms;
+transition-delay: 25ms;
 }
 
 .fab:not(:last-child):nth-last-child(2) {
-  -webkit-transition-delay: 20ms;
-  -moz-transition-delay: 20ms;
-  -o-transition-delay: 20ms;
-  transition-delay: 20ms;
+-webkit-transition-delay: 20ms;
+-moz-transition-delay: 20ms;
+-o-transition-delay: 20ms;
+transition-delay: 20ms;
 }
 
 .fab:not(:last-child):nth-last-child(3) {
-  -webkit-transition-delay: 40ms;
-  -moz-transition-delay: 40ms;
-  -o-transition-delay: 40ms;
-  transition-delay: 40ms;
+-webkit-transition-delay: 40ms;
+-moz-transition-delay: 40ms;
+-o-transition-delay: 40ms;
+transition-delay: 40ms;
 }
 
 .fab:not(:last-child):nth-last-child(4) {
-  -webkit-transition-delay: 60ms;
-  -moz-transition-delay: 60ms;
-  -o-transition-delay: 60ms;
-  transition-delay: 60ms;
+-webkit-transition-delay: 60ms;
+-moz-transition-delay: 60ms;
+-o-transition-delay: 60ms;
+transition-delay: 60ms;
 }
 
 .fab:not(:last-child):nth-last-child(5) {
-  -webkit-transition-delay: 80ms;
-  -moz-transition-delay: 80ms;
-  -o-transition-delay: 80ms;
-  transition-delay: 80ms;
+-webkit-transition-delay: 80ms;
+-moz-transition-delay: 80ms;
+-o-transition-delay: 80ms;
+transition-delay: 80ms;
 }
 
 .fab:not(:last-child):active,
 .fab:not(:last-child):focus,
 .fab:not(:last-child):hover {
-  box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
 }
 
 .fab_field {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  background: #eceff1;
-  box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+width: 100%;
+display: inline-block;
+text-align: center;
+background: #eceff1;
+box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
 }
 
 .fab_field a {
-  display: inline-block;
-  text-align: center;
+display: inline-block;
+text-align: center;
 }
 
 #fab_listen {
-  float: left;
-  background: rgba(0, 0, 0, 0);
+float: left;
+background: rgba(0, 0, 0, 0);
 }
 
 #fab_send {
-  float: right;
-  background: rgba(0, 0, 0, 0);
+float: right;
+background: rgba(0, 0, 0, 0);
 }
 
 .fab_field .fab {
-  width: 35px;
-  height: 35px;
-  box-shadow: none;
-  margin: 5px;
+width: 35px;
+height: 35px;
+box-shadow: none;
+margin: 5px;
 }
 
 .fab_field .fab>i {
-  font-size: 1.6em;
-  line-height: 35px;
-  color: #263238;
+font-size: 1.6em;
+line-height: 35px;
+color: #263238;
 }
 
 
 /*Element state*/
 
 .is-active {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -o-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+-moz-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+transform: rotate(180deg);
+-o-transition: all 1s ease-in-out;
+-moz-transition: all 1s ease-in-out;
+transition: all 1s ease-in-out;
 }
 
 .is-float {
-  box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
 }
 
 .is-max {
-  box-shadow: inset 0 -12px 10px -10px rgba(0, 0, 0, 0.18), inset 0 12px 10px -10px rgba(0, 0, 0, 0.10);
+box-shadow: inset 0 -12px 10px -10px rgba(0, 0, 0, 0.18), inset 0 12px 10px -10px rgba(0, 0, 0, 0.10);
 }
 
 .is-loading {
-  display: block;
-  -webkit-animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
-  -moz-animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
-  -o-animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
-  animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
+display: block;
+-webkit-animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
+-moz-animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
+-o-animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
+animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
 }
 
 
 /*Animation*/
 
 @keyframes zoomIn {
-  0% {
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    opacity: 0.0;
-  }
-  100% {
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
+0% {
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 0.0;
+}
+100% {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
 }
 
 @keyframes load {
-  0% {
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    opacity: 0.0;
-  }
-  50% {
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-    opacity: 1;
-  }
-  100% {
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 0;
-  }
+0% {
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 0.0;
+}
+50% {
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  opacity: 1;
+}
+100% {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 0;
+}
 }
 /* SMARTPHONES PORTRAIT */
 
 @media only screen and (min-width: 300px) {
-  .chat {
-    width: 200px;
-  }
+.chat {
+  width: 200px;
+}
 }
 /* SMARTPHONES LANDSCAPE */
 
 @media only screen and (min-width: 480px) {
-  .chat {
-    width: 300px;
-  }
-  .chat_field {
-    width: 65%;
-  }
+.chat {
+  width: 300px;
+}
+.chat_field {
+  width: 65%;
+}
 }
 /* TABLETS PORTRAIT */
 
 @media only screen and (min-width: 768px) {
-  .chat {
-    width: 300px;
-  }
-  .chat_field {
-    width: 65%;
-  }
+.chat {
+  width: 300px;
+}
+.chat_field {
+  width: 65%;
+}
 }
 /* TABLET LANDSCAPE / DESKTOP */
 
 @media only screen and (min-width: 1024px) {
-  .chat {
-    width: 400px;
-  }
-  .chat_field {
-    width: 65%;
-  }
+.chat {
+  width: 400px;
+}
+.chat_field {
+  width: 65%;
+}
 }
 
 
 /* Ripple */
 
 .ink {
-  display: block;
-  position: absolute;
-  background: rgba(38, 50, 56, 0.4);
-  border-radius: 100%;
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  webkit-transform: scale(0);
-  transform: scale(0);
+display: block;
+position: absolute;
+background: rgba(38, 50, 56, 0.4);
+border-radius: 100%;
+-moz-transform: scale(0);
+-ms-transform: scale(0);
+webkit-transform: scale(0);
+transform: scale(0);
 }
 /*animation effect*/
 
 .ink.animate {
-  animation: ripple 0.5s ease-in-out;
+animation: ripple 0.5s ease-in-out;
 }
 
 @keyframes ripple {
-  /*scale the element to 250% to safely cover the entire link and fade it out*/
-  
-  100% {
-    opacity: 0;
-    -moz-transform: scale(5);
-    -ms-transform: scale(5);
-    webkit-transform: scale(5);
-    transform: scale(5);
-  }
+/*scale the element to 250% to safely cover the entire link and fade it out*/
+
+100% {
+  opacity: 0;
+  -moz-transform: scale(5);
+  -ms-transform: scale(5);
+  webkit-transform: scale(5);
+  transform: scale(5);
+}
 }
 /* CHAT FUNCTION STYLING */
 
 body .cx-widget {
-    right: 10px!important;
+  right: 10px!important;
 }
 
 /**
@@ -309,57 +309,57 @@ body .cx-widget {
 *   CSS code om custom button te tonen
 **/
 .genesys_chat_box {
-    background-color:#005CA9;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    height: auto;
-    padding: 10px;
-    margin:15px;
-    display: inline-block;
-    overflow: hidden;
-    color:#FFFFFF;
-    position:fixed;
-    z-index:10000;
+  background-color:#005CA9;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  margin:15px;
+  display: inline-block;
+  overflow: hidden;
+  color:#FFFFFF;
+  position:fixed;
+  z-index:10000;
 }
 
 #ci_espot__Footer-Banner-Top {
-  z-index: 9000;
+z-index: 9000;
 }
 #footerTopEspot {
-    z-index: 900;
+  z-index: 900;
 }
 /* .contentRecommendationWidget {z-index: 900;} */
 
 .genesys_close {
-  position: relative;
-    top: -15px;
-    left:-14px;
-    padding:0px 5px 3px 5px;
-    background-color: white;
-    border: #005CA9 solid 1px;
-    border-radius: 50%;
+position: relative;
+  top: -15px;
+  left:-14px;
+  padding:0px 5px 3px 5px;
+  background-color: white;
+  border: #005CA9 solid 1px;
+  border-radius: 50%;
 }
 
 .genesys_close:hover {
-    background-color: #DEDEDE;
-    text-decoration:none;
+  background-color: #DEDEDE;
+  text-decoration:none;
 }
 
 .genesys_chat_container {
-  position:fixed;
-  bottom:5px;
-  right:5px;
-  /* z-index:99999; */
-  cursor:pointer;
+position:fixed;
+bottom:5px;
+right:5px;
+/* z-index:99999; */
+cursor:pointer;
 }
 @media screen and (min-width:900px){
-    .genesys_chat_container {
-  position:fixed;
-  bottom:5px;
-  right:50px;
-  /* z-index:99999; */
-  cursor:pointer;
+  .genesys_chat_container {
+position:fixed;
+bottom:5px;
+right:50px;
+/* z-index:99999; */
+cursor:pointer;
 }  
 }
 
@@ -371,242 +371,242 @@ body .cx-widget {
 /* Convert to CSS using an online tool */
 /* Color Palette */
 /*
-	Light Theme Color Overrides
+Light Theme Color Overrides
 */
 
 .cx-webchat .cx-transcript .cx-message.cx-system .cx-message-text, .cx-webchat .cx-transcript .cx-message.cx-system .cx-time {
-    font-family: 'lato',sans-serif;
+  font-family: 'lato',sans-serif;
 }
 .cx-webchat div.cx-input-container .cx-message-input {font-family: 'lato',sans-serif;}
 
 
 .cx-webchat.cx-theme-light .cx-transcript .cx-message.cx-them .cx-bubble {
-    background-color: #cfe393;
+  background-color: #cfe393;
 }
 
 .cx-webchat.cx-theme-light .cx-message.cx-them .cx-bubble-arrow svg * {
-    fill: #cfe393;
+  fill: #cfe393;
 }
 
 .cx-widget.cx-theme-light {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  color: #444A52;
-  background-color: #FDFDFD;
-  scrollbar-face-color: #CCCCCC;
-  /* WCAG: non-text contrast for UI components - primary button focus state */
-  /* loader icon */
+-webkit-border-radius: 5px;
+border-radius: 5px;
+color: #444A52;
+background-color: #FDFDFD;
+scrollbar-face-color: #CCCCCC;
+/* WCAG: non-text contrast for UI components - primary button focus state */
+/* loader icon */
 }
 .cx-widget.cx-theme-light .cx-theme {
-  background-color: #FDFDFD;
-  color: #444A52;
-  border-color: #DAE1E8 !important;
-  font-family: 'Lato', sans-serif;
+background-color: #FDFDFD;
+color: #444A52;
+border-color: #DAE1E8 !important;
+font-family: 'Lato', sans-serif;
 }
 .cx-widget.cx-theme-light .cx-overlay {
-  background-color: #FDFDFD;
+background-color: #FDFDFD;
 }
 .cx-widget.cx-theme-light .cx-svg-icon-tone1 {
-  fill: #FDFDFD;
+fill: #FDFDFD;
 }
 .cx-widget.cx-theme-light .cx-svg-icon-tone2 {
-  fill: #ffffff;
+fill: #ffffff;
 }
 .cx-widget.cx-theme-light .cx-svg-icon-shadow1 {
-  fill: #000000;
-  opacity: 1;
+fill: #000000;
+opacity: 1;
 }
 .cx-widget.cx-theme-light .cx-svg-icon-shadow2 {
-  fill: #000000;
-  opacity: 0.1;
+fill: #000000;
+opacity: 0.1;
 }
 .cx-widget.cx-theme-light * {
-  border-color: #DAE1E8;
+border-color: #DAE1E8;
 }
 .cx-widget.cx-theme-light .cx-titlebar .cx-title {
-  color: #fff;
-    font-family: 'lilita one', sans-serif;
-    text-transform: uppercase;
+color: #fff;
+  font-family: 'lilita one', sans-serif;
+  text-transform: uppercase;
 }
 .cx-widget.cx-theme-light .cx-titlebar {
-  background-color: #005CA9;
+background-color: #005CA9;
 }
 .cx-widget.cx-theme-light .cx-buttons-window-control .cx-svg-icon-tone1 {
-  fill: #fff;
+fill: #fff;
 }
 .cx-widget.cx-theme-light .cx-input-icon-overlay .cx-svg-icon-tone1 {
-  fill: #fff;
+fill: #fff;
 }
 .cx-widget.cx-theme-light .cx-input-group-btn .cx-svg-icon-tone1 {
-  fill: #fff;
+fill: #fff;
 }
 .cx-widget.cx-theme-light label {
-  color: #444A52;
-  font-family: 'Lato', sans-serif;
+color: #444A52;
+font-family: 'Lato', sans-serif;
 }
 .cx-widget.cx-theme-light a {
-  color: #000000;
+color: #000000;
 }
 .cx-widget.cx-theme-light a:hover {
-  color: #000000;
+color: #000000;
 }
 .cx-widget.cx-theme-light .cx-side-button-group {
-  display: block;
-  color: #000000;
+display: block;
+color: #000000;
 }
 .cx-widget.cx-theme-light .cx-buttons-window-control {
-  display: block;
+display: block;
 }
 .cx-widget.cx-theme-light .cx-icon-alert-circle {
-  color: #444A52;
+color: #444A52;
 }
 .cx-widget.cx-theme-light .cx-footer,
 .cx-widget.cx-theme-light .cx-branding {
-  color: #66759B;
+color: #66759B;
 }
 .cx-widget.cx-theme-light .cx-footer *,
 .cx-widget.cx-theme-light .cx-branding * {
-  fill: #66759B;
+fill: #66759B;
 }
 .cx-widget.cx-theme-light .cx-form-control.cx-error {
-  border-color: #444A52;
+border-color: #444A52;
 }
 .cx-widget.cx-theme-light .cx-form-control::placeholder {
-  color: #6F7491;
+color: #6F7491;
 }
 .cx-widget.cx-theme-light .cx-form-control:-moz-placeholder {
-  color: #6F7491;
+color: #6F7491;
 }
 .cx-widget.cx-theme-light .cx-form-control::-moz-placeholder {
-  color: #6F7491;
+color: #6F7491;
 }
 .cx-widget.cx-theme-light .cx-form-control:-ms-input-placeholder {
-  color: #6F7491;
+color: #6F7491;
 }
 .cx-widget.cx-theme-light .cx-form-control::-webkit-input-placeholder {
-  color: #6F7491;
+color: #6F7491;
 }
 .cx-widget.cx-theme-light input:focus,
 .cx-widget.cx-theme-light textarea:focus,
 .cx-widget.cx-theme-light .cx-btn:focus,
 .cx-widget.cx-theme-light .cx-button-group button:focus,
 .cx-widget.cx-theme-light .cx-form-control:not(.cx-error):focus {
-  border-color: #005CA9 !important;
+border-color: #005CA9 !important;
 }
 .cx-widget.cx-theme-light input[type="text"],
 .cx-widget.cx-theme-light input[type="email"],
 .cx-widget.cx-theme-light input[type="tel"],
 .cx-widget.cx-theme-light select,
 .cx-widget.cx-theme-light textarea {
-  background-color: #FDFDFD;
-  color: #444A52;
-  border-color: #94948A;
+background-color: #FDFDFD;
+color: #444A52;
+border-color: #94948A;
 }
 .cx-widget.cx-theme-light .cx-btn-default {
-  background: none;
-  border-color: #DAE1E8 !important;
-  color: #FDFDFD;
-  background-color: #D8D8D8;
-  text-transform: uppercase;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+background: none;
+border-color: #DAE1E8 !important;
+color: #FDFDFD;
+background-color: #D8D8D8;
+text-transform: uppercase;
+-webkit-border-radius: 5px;
+border-radius: 5px;
 }
 .cx-widget.cx-theme-light .cx-btn.cx-disabled {
-  background: #CCCCCC;
+background: #CCCCCC;
 }
 .cx-widget.cx-theme-light .cx-btn-primary {
-  color: #FDFDFD;
-  border-color: #005CA9 !important;
-  background: #005CA9;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #005CA9 0%, #005CA9 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #005CA9 0%, #005CA9 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #005CA9 0%, #005CA9 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@bg_color_4', endColorstr='@bg_color_5', GradientType=0);
-  /* IE6-9 */
-  background-color: #005CA9;
-  /* Old browsers */
-  text-transform: uppercase;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-family: 'Lato', sans-serif;
+color: #FDFDFD;
+border-color: #005CA9 !important;
+background: #005CA9;
+/* Old browsers */
+background: -moz-linear-gradient(top, #005CA9 0%, #005CA9 100%);
+/* FF3.6-15 */
+background: -webkit-linear-gradient(top, #005CA9 0%, #005CA9 100%);
+/* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #005CA9 0%, #005CA9 100%);
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@bg_color_4', endColorstr='@bg_color_5', GradientType=0);
+/* IE6-9 */
+background-color: #005CA9;
+/* Old browsers */
+text-transform: uppercase;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+font-family: 'Lato', sans-serif;
 }
 .cx-widget.cx-theme-light .cx-button-group .cx-btn-primary:focus,
 .cx-widget.cx-theme-light .cx-btn-primary:focus,
 .cx-widget.cx-theme-light .cx-button-group .cx-btn-default:focus,
 .cx-widget.cx-theme-light .cx-btn-default:focus {
-  border-color: #000 !important;
+border-color: #000 !important;
 }
 .cx-widget.cx-theme-light .cx-ac-dropdown-menu {
-  background: #FDFDFD;
-  border-color: #DAE1E8 !important;
+background: #FDFDFD;
+border-color: #DAE1E8 !important;
 }
 .cx-widget.cx-theme-light .cx-ac-suggestion:hover,
 .cx-widget.cx-theme-light .cx-ac-suggestion.cx-active {
-  background-color: #005CA9;
-  color: #FDFDFD;
+background-color: #005CA9;
+color: #FDFDFD;
 }
 .cx-widget.cx-theme-light ::-webkit-scrollbar-thumb {
-  background: #939399;
-  /* WCAG: Non-text contrast */
+background: #939399;
+/* WCAG: Non-text contrast */
 }
 .cx-widget.cx-theme-light .cx-smokescreen {
-  background-color: #FDFDFD;
-  opacity: 0.7;
+background-color: #FDFDFD;
+opacity: 0.7;
 }
 .cx-widget.cx-theme-light .cx-dialog-container .cx-dialog {
-  background-color: #FDFDFD;
-  border-color: #DAE1E8 !important;
+background-color: #FDFDFD;
+border-color: #DAE1E8 !important;
 }
 .cx-widget.cx-theme-light .cx-theme-background {
-  background-color: #FDFDFD;
+background-color: #FDFDFD;
 }
 .cx-widget.cx-theme-light .cx-theme-border {
-  border: 1px solid #DAE1E8 !important;
+border: 1px solid #DAE1E8 !important;
 }
 .cx-widget.cx-theme-light .cx-theme-text {
-  color: #444A52;
+color: #444A52;
 }
 .cx-widget.cx-theme-light .cx-theme-icon-interactive1 svg .cx-svg-icon-tone1 {
-  fill: #005CA9;
+fill: #005CA9;
 }
 .cx-widget.cx-theme-light .cx-theme-icon-positive svg .cx-svg-icon-tone1 {
-  fill: #34A84F;
+fill: #34A84F;
 }
 .cx-widget.cx-theme-light .cx-theme-icon-negative svg .cx-svg-icon-tone1 {
-  fill: #323232;
+fill: #323232;
 }
 .cx-widget.cx-theme-light .cx-theme-icon-warning svg .cx-svg-icon-tone1 {
-  fill: #D47F2F;
+fill: #D47F2F;
 }
 .cx-widget.cx-theme-light .cx-warning {
-  color: #444A52 !important;
+color: #444A52 !important;
 }
 .cx-widget.cx-theme-light .cx-warning .cx-icon svg * {
-  fill: #444A52 !important;
+fill: #444A52 !important;
 }
 .cx-widget.cx-theme-light .cx-countdown {
-  color: #444A52;
+color: #444A52;
 }
 .cx-widget.cx-theme-light .cx-countdown .cx-icon svg * {
-  fill: #444A52;
+fill: #444A52;
 }
 .cx-widget.cx-theme-light .cx-loading-screen .cx-loading-icon svg g g,
 .cx-widget.cx-theme-light .cx-loading-container .cx-loading-icon svg g g {
-  stroke: #2B74FF;
+stroke: #2B74FF;
 }
 .cx-widget.cx-theme-light .cx-loading-screen .cx-loading-icon svg g:first-child g,
 .cx-widget.cx-theme-light .cx-loading-container .cx-loading-icon svg g:first-child g {
-  stroke: #72799D;
+stroke: #72799D;
 }
 .cx-widget.cx-theme-dreamland [data-icon]::before {
-    content: none;
+  content: none;
 }
 [data-icon]::before {
-    display:none;
+  display:none;
 }
 
 </style>
@@ -614,71 +614,71 @@ body .cx-widget {
 // toggleFab();
 //Fab click
 $('#prime').click(function() {
-  toggleFab();
-  loadScripts();
+toggleFab();
+loadScripts();
 });
 
 //Toggle chat and links
 function toggleFab() {
-  $('.prime').toggleClass('is-active');
-  $('#prime').toggleClass('is-float');
-  $('.fab').toggleClass('is-visible');
+$('.prime').toggleClass('is-active');
+$('#prime').toggleClass('is-float');
+$('.fab').toggleClass('is-visible');
 }
 
 // Ripple effect
 var target, ink, d, x, y;
 $(".fab").click(function(e) {
-  target = $(this);
-  //create .ink element if it doesn't exist
-  if (target.find(".ink").length == 0)
-    target.prepend("<span class='ink'></span>");
+target = $(this);
+//create .ink element if it doesn't exist
+if (target.find(".ink").length == 0)
+  target.prepend("<span class='ink'></span>");
 
-  ink = target.find(".ink");
-  //incase of quick double clicks stop the previous animation
-  ink.removeClass("animate");
+ink = target.find(".ink");
+//incase of quick double clicks stop the previous animation
+ink.removeClass("animate");
 
-  //set size of .ink
-  if (!ink.height() && !ink.width()) {
-    //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
-    d = Math.max(target.outerWidth(), target.outerHeight());
-    ink.css({
-      height: d,
-      width: d
-    });
-  }
-
-  //get click coordinates
-  //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
-  x = e.pageX - target.offset().left - ink.width() / 2;
-  y = e.pageY - target.offset().top - ink.height() / 2;
-
-  //set the position and add class .animate
+//set size of .ink
+if (!ink.height() && !ink.width()) {
+  //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
+  d = Math.max(target.outerWidth(), target.outerHeight());
   ink.css({
-    top: y + 'px',
-    left: x + 'px'
-  }).addClass("animate");
+    height: d,
+    width: d
+  });
+}
+
+//get click coordinates
+//logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
+x = e.pageX - target.offset().left - ink.width() / 2;
+y = e.pageY - target.offset().top - ink.height() / 2;
+
+//set the position and add class .animate
+ink.css({
+  top: y + 'px',
+  left: x + 'px'
+}).addClass("animate");
 });
 function loadScripts() {    
 if(document.querySelector("#chat-script") == null){
 var script = document.createElement("script");
-  script.setAttribute("type", "text/javascript");
-  script.setAttribute("id", "chat-script");
-  script.setAttribute("src", "https://apps.mypurecloud.com/pureconnect-widgets");
-  script.setAttribute("pureconnect-widgets-data", "eyJpZCI6IlUzOUNfRHJlYW1sYW5kQ2hhdCIsImljU2VydmVycyI6WyJjaWMtc3lzdC5jb2xydXl0LmludCJdLCJyZXZlcnNlUHJveHlVcmwiOiJodHRwczovL3B1cmVjb25uZWN0d2VidG9vbHMuc3lzdC5jb2xydXl0Z3JvdXAuY29tL2FwaSIsInVzZUNhYVMiOmZhbHNlLCJjYWFzVXJsIjpudWxsLCJ1c2VIdHRwcyI6dHJ1ZX0=");
-  document.body.appendChild(script);
+script.setAttribute("type", "text/javascript");
+script.setAttribute("id", "chat-script");
+script.setAttribute("src", "https://apps.mypurecloud.com/pureconnect-widgets");
+script.setAttribute("pureconnect-widgets-data", "eyJpZCI6IlUzOUNfRHJlYW1sYW5kQ2hhdCIsImljU2VydmVycyI6WyJjaWMtc3lzdC5jb2xydXl0LmludCJdLCJyZXZlcnNlUHJveHlVcmwiOiJodHRwczovL3B1cmVjb25uZWN0d2VidG9vbHMuc3lzdC5jb2xydXl0Z3JvdXAuY29tL2FwaSIsInVzZUNhYVMiOmZhbHNlLCJjYWFzVXJsIjpudWxsLCJ1c2VIdHRwcyI6dHJ1ZX0=");
+document.body.appendChild(script);
 };
 };
 $(window).on('load', function () {
-      alert("Window Loaded");
-      $("#fab-button").removeClass("hidden");
-      //Hide GetFeedback Digital Default button
-        window.usabilla_live("hide");
- });
+    alert("Window Loaded");
+    $("#fab-button").removeClass("hidden");
+    //Hide GetFeedback Digital Default button
+      window.usabilla_live("hide");
+});
 document.getElementById("chat").addEventListener("click", function() {
-    CXBus.command('WebChat.open');
+  CXBus.command('WebChat.open');
 });
 //Find a Link and open the GetFeedback Digital Feedback form when the user clicks on the link
 document.getElementById("feedback-usabilla").addEventListener("click",function(){
-	window.usabilla_live("click");
+window.usabilla_live("click");
 });
 </script>
